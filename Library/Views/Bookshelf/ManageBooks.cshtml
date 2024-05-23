@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Library.Models.Book>
+@{
+   ViewData["Title"] = "Manage Books";
+   Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>@ViewData["Title"]</title>
+   <link rel="stylesheet" href="~/css/manage.css" />
+   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body class="basic-blue-body">
+   <header class="header-nav">
+      <a href="@Url.Action("Index", "Home")" class="logo">
+         <img src="@Url.Content("~/assets/logo_lib.png")" />
+      </a>
+      <h5 class="page-type">Manage Books</h5>
+      <nav class="navbar">
+         <a href="@Url.Action("Index", "Home")"><i class="bx bx-home-heart"></i>Home</a>
+			<a href="@Url.Action("Index", "AboutUs")"><i class="bx bxs-news"></i>AboutUs</a>
+         <a href="@Url.Action("Index", "Contact")"><i class="bx bxs-contact"></i>Contact</a>
+         <a href="@Url.Page("/Account/Manage/Index", new { area = "Identity" })"><i class="bx bx-cog"></i>Settings</a>
+      </nav>
+      <partial name="_LoginPartial" />
+   </header>
+
+<div class="manage-books-container">
+	<div class="manage-books-form">
+		<h1 class="text-center mb-4">Manage Books</h1>
+		<a href="@Url.Action("CreateBook", "Bookshelf")" class="manage-books-btn btn btn-primary mb-3">Add New Book</a>
+		<div class="table-responsive">
+			<table class="manage-books-table table table-striped table-hover">
+				<thead>
+				<tr>
+					<th>ISBN</th>
+					<th>Title</th>
+					<th>Category</th>
+					<th>Release Year</th>
+					<th>Actions</th>
+				</tr>
+				</thead>
+				<tbody>
+				@foreach (var book in Model)
+				{
+					<tr>
+						<td>@book.ISBN</td>
+						<td>@book.Title</td>
+						<td>@book.Category</td>
+						<td>@book.ReleaseYear</td>
+						<td>
+							<a href="@Url.Action("EditBook", "Bookshelf", new { id = book.ISBN })" class="manage-books-btn btn btn-primary btn-sm mr-2">Edit</a>
+							<form asp-action="DeleteBook" method="post" class="d-inline">
+								<input type="hidden" name="id" value="@book.ISBN" />
+								<button type="submit" class="manage-books-btn btn btn-danger btn-sm">Delete</button>
+							</form>
+						</td>
+					</tr>
+				}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+   <script src="~/js/script.js"></script>
+</body>
+</html>

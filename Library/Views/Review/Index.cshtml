@@ -1,0 +1,73 @@
+﻿@{
+   ViewData["Title"] = "Review";
+   Layout = null;
+}
+@model List<Library.Controllers.ReviewViewModel>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>@ViewData["Title"]</title>
+   <link rel="stylesheet" href="~/css/style.css" />
+   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body class="review-body">
+   <header class="header-nav">
+      <a href="@Url.Action("Index", "Home")" class="logo">
+         <img src="@Url.Content("~/assets/logo_lib.png")" />
+      </a>
+      <h5 class="page-type"> Review</h5>
+      <nav class="navbar">
+         <a href="@Url.Action("Index", "Home")"><i class="bx bx-home-heart"></i>Home</a>
+         <a href="@Url.Action("Index", "AboutUs")"><i class="bx bxs-news"></i>AboutUs</a>
+         <a href="@Url.Action("Index", "Contact")"><i class="bx bxs-contact"></i>Contact</a>
+         <a href="@Url.Page("/Account/Manage/Index", new { area = "Identity" })"><i class="bx bx-cog"></i>Settings</a>
+      </nav>
+      <partial name="_LoginPartial" />
+   </header>
+
+   <div class="wrapper">
+      <div class="book-details">
+         <img src="@Url.Content($"~/assets/books/{ViewData["ISBN"]}.png")" alt="@ViewBag.BookTitle" onerror="this.src='@Url.Content("~/assets/default_book.png")'">
+      </div>
+      <h3>Review the book, let us know about your experience</h3>
+      <form method="post" action="@Url.Action("AddReview", "Review", new { isbn = ViewData["ISBN"] })">
+         <input type="hidden" name="BookISBN" value="@ViewData["ISBN"]" />
+         <div class="rating">
+            <input type="number" name="Rating" hidden />
+            <i class="bx bx-star star" style="--i: 0"></i>
+            <i class="bx bx-star star" style="--i: 1"></i>
+            <i class="bx bx-star star" style="--i: 2"></i>
+            <i class="bx bx-star star" style="--i: 3"></i>
+            <i class="bx bx-star star" style="--i: 4"></i>
+         </div>
+         <textarea class="text-review" name="Content" cols="30" rows="5" placeholder="Your opinion..."></textarea>
+         <div class="btn-group">
+            <button type="submit" class="btn submit">Submit</button>
+         
+         </div>
+      </form>
+   </div>
+
+   <div class="reviews-section">
+      <h3>Customer Reviews</h3>
+      @foreach (var reviewViewModel in Model)
+      {
+         <div class="review">
+            <div class="rating">
+               @for (var i = 0; i < reviewViewModel.Review.Rating; i++)
+               {
+                  <i class="bx bx-star"></i>
+               }
+            </div>
+            <p>@reviewViewModel.Review.Content</p>
+            <p><strong>Reviewed by:</strong> @reviewViewModel.UserName</p>
+         </div>
+      }
+   </div>
+
+   <script src="~/js/review.js"></script>
+</body>
+</html>

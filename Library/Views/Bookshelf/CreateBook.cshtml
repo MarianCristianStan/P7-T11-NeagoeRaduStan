@@ -1,0 +1,74 @@
+﻿@model Library.Models.Book
+@{
+   ViewData["Title"] = "Create Book";
+   Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>@ViewData["Title"]</title>
+   <link rel="stylesheet" href="~/css/createBook.css" />
+   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body class="basic-blue-body">
+   <header class="header-nav">
+      <a href="@Url.Action("Index", "Home")" class="logo">
+         <img src="@Url.Content("~/assets/logo_lib.png")" />
+      </a>
+      <h5 class="page-type">Create Book</h5>
+      <nav class="navbar">
+         <a href="@Url.Action("Index", "Home")"><i class="bx bx-home-heart"></i>Home</a>
+			<a href="@Url.Action("Index", "AboutUs")"><i class="bx bxs-news"></i>AboutUs</a>
+         <a href="@Url.Action("Index", "Contact")"><i class="bx bxs-contact"></i>Contact</a>
+         <a href="@Url.Page("/Account/Manage/Index", new { area = "Identity" })"><i class="bx bx-cog"></i>Settings</a>
+      </nav>
+      <partial name="_LoginPartial" />
+   </header>
+
+	<div class="create-book-container">
+		<div class="create-book-form">
+			<h1 class="text-center mb-4">Create Book</h1>
+			<form asp-action="CreateBook" method="post">
+				<div class="form-group">
+					<label asp-for="ISBN">ISBN:</label>
+					<input asp-for="ISBN" class="form-control" required />
+				</div>
+				<div class="form-group">
+					<label asp-for="Title">Title:</label>
+					<input asp-for="Title" class="form-control" required />
+				</div>
+				<div class="form-group">
+					<label asp-for="Category">Category:</label>
+					<input asp-for="Category" class="form-control" required />
+				</div>
+				<div class="form-group">
+					<label asp-for="ReleaseYear">Release Year:</label>
+					<input asp-for="ReleaseYear" class="form-control" required />
+				</div>
+				<div class="form-group">
+					<label asp-for="IdBookshelf">Bookshelf:</label>
+					<select asp-for="IdBookshelf" class="form-control" asp-items="@(new SelectList(ViewBag.Bookshelves, "IdBookshelf", "Category"))">
+						<option value="">Select Bookshelf</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label asp-for="IdPublisher">Publisher:</label>
+					<select asp-for="IdPublisher" class="form-control" asp-items="@(new SelectList(ViewBag.Publishers, "IdPublisher", "Name"))">
+						<option value="">Select Publisher</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="authorNames">Authors:</label>
+					<input type="text" id="authorNames" name="authorNames" class="form-control" placeholder="Enter author names, separated by commas" required />
+				</div>
+				<button type="submit" class="create-book-btn btn btn-primary">Create Book</button>
+			</form>
+		</div>
+	</div>
+
+   <script src="~/js/script.js"></script>
+</body>
+</html>

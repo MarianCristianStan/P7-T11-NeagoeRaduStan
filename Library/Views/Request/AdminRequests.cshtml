@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Library.Models.Request>
+@{
+   ViewData["Title"] = "Admin Requests";
+   Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>@ViewData["Title"]</title>
+   <link rel="stylesheet" href="~/css/request.css" />
+   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body class="basic-blue-body">
+   <header class="header-nav">
+      <a href="@Url.Action("Index", "Home")" class="logo">
+         <img src="@Url.Content("~/assets/logo_lib.png")" />
+      </a>
+      <h5 class="page-type">Admin Requests</h5>
+      <nav class="navbar">
+         <a href="@Url.Action("Index", "Home")"><i class="bx bx-home-heart"></i>Home</a>
+         <a href="@Url.Action("Index", "AboutUs")"><i class="bx bxs-news"></i>AboutUs</a>
+         <a href="@Url.Action("Index", "Contact")"><i class="bx bxs-contact"></i>Contact</a>
+         <a href="@Url.Page("/Account/Manage/Index", new { area = "Identity" })"><i class="bx bx-cog"></i>Settings</a>
+      </nav>
+      <partial name="_LoginPartial" />
+   </header>
+
+   <div class="admin-request-book-container">
+      <div class="admin-request-book-form">
+	      <h2>Reserve Requests</h2>
+	      @if (TempData["Message"] != null)
+	      {
+		      <div class="alert alert-info">
+			      @TempData["Message"]
+		      </div>
+	      }
+	      <div class="switch-requests">
+		      <a href="@Url.Action("AdminReturnRequests", "Request")" class="btn switch-btn">View Return Requests</a>
+	      </div>
+         <table class="admin-table">
+            <thead>
+               <tr>
+                  <th>User</th>
+                  <th>Book ISBN</th>
+                  <th>Request Date</th>
+                  <th>Description</th>
+                  <th>Actions</th>
+               </tr>
+            </thead>
+            <tbody>
+               @foreach (var request in Model)
+               {
+                  <tr>
+                     <td>@request.IdUser</td>
+                     <td>@request.BookISBN</td>
+                     <td>@request.RequestDate.ToShortDateString()</td>
+                     <td>@request.Description</td>
+                     <td>
+                        @if (!request.IsApproved)
+                        {
+                           <form asp-action="AcceptRequest" method="post" style="display: inline;">
+                              <input type="hidden" name="requestId" value="@request.IdRequest" />
+                              <button type="submit" class="admin-request-book-btn">Accept</button>
+                           </form>
+                        }
+                        else
+                        {
+                           <form asp-action="DisableRequest" method="post" style="display: inline;">
+                              <input type="hidden" name="requestId" value="@request.IdRequest" />
+                              <button type="submit" class="admin-request-book-btn">Disable</button>
+                           </form>
+                           <span class="admin-approved">Approved</span>
+                        }
+                     </td>
+                  </tr>
+               }
+            </tbody>
+         </table>
+      </div>
+   </div>
+
+   <script src="~/js/script.js"></script>
+</body>
+</html>

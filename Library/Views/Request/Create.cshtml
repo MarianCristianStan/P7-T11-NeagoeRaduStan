@@ -1,0 +1,68 @@
+﻿@model Library.Models.Request
+@{
+   ViewData["Title"] = "Request a Book";
+   Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>@ViewData["Title"]</title>
+
+   <link rel="stylesheet" href="~/css/request.css" />
+   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body class="basic-blue-body">
+   <header class="header-nav">
+      <a href="@Url.Action("Index", "Home")" class="logo">
+         <img src="@Url.Content("~/assets/logo_lib.png")" />
+      </a>
+      <h5 class="page-type">Request book</h5>
+      <nav class="navbar">
+         <a href="@Url.Action("Index", "Home")"><i class="bx bx-home-heart"></i>Home</a>
+         <a href="@Url.Action("Index", "AboutUs")"><i class="bx bxs-news"></i>AboutUs</a>
+         <a href="@Url.Action("Index", "Contact")"><i class="bx bxs-contact"></i>Contact</a>
+         <a href="@Url.Page("/Account/Manage/Index", new { area = "Identity" })"><i class="bx bx-cog"></i>Settings</a>
+      </nav>
+      <partial name="_LoginPartial" />
+   </header>
+
+   <div class="request-book-container">
+      <div class="request-book-form">
+         <h2>Request a Book</h2>
+         <div class="book-details">
+            <img src="@Url.Content($"~/assets/books/{ViewBag.BookISBN}.png")" alt="Book Cover" onerror="this.src='@Url.Content("~/assets/default_book.png")'" />
+            <h3>@ViewBag.BookTitle</h3>
+            <p>Category: @ViewBag.BookCategory</p>
+            <p>Release Year: @ViewBag.BookReleaseYear</p>
+            <p>
+               Authors:
+               @if (ViewBag.BookAuthors != null)
+               {
+                  foreach (var author in ViewBag.BookAuthors)
+                  {
+                     <span>@author</span>
+                  }
+               }
+            </p>
+         </div>
+         <form asp-action="Create" method="post">
+            <input type="hidden" name="BookISBN" value="@ViewBag.BookISBN" />
+            <div class="form-group">
+               <label asp-for="RequestDate">Requested Date:</label>
+               <input asp-for="RequestDate" type="date" required />
+            </div>
+            <div class="form-group">
+               <label asp-for="Description">Description:</label>
+               <textarea asp-for="Description" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="request-book-btn">Request Book</button>
+         </form>
+      </div>
+   </div>
+
+   <script src="~/js/script.js"></script>
+</body>
+</html>

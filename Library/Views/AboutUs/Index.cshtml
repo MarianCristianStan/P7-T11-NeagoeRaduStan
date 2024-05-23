@@ -1,0 +1,106 @@
+﻿
+@{
+	ViewData["Title"] = "AboutUs";
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>@ViewBag.Title</title>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="@Url.Content("~/css/style.css")" />
+   <link rel="stylesheet" href="@Url.Content("~/css/about.css")" />
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="about-page">
+<header class="header-nav">
+<a href="@Url.Action("Index", "Home")" class="logo">
+	<img src="@Url.Content("~/assets/logo_lib.png")" />
+</a>
+      <h5 class="page-type">About us</h5>
+<nav class="navbar">
+<a href="@Url.Action("Index", "Home")"><i class="bx bx-home-heart"></i>Home</a>
+<a href="@Url.Action("Index", "AboutUs")"><i class="bx bx-news"></i>AboutUs</a>
+<a href="@Url.Action("Index", "Contact")"><i class="bx bxs-contact"></i>Contact</a>
+<a href="@Url.Page("/Account/Manage/Index", new { area = "Identity" })"><i class="bx bx-cog"></i>Settings</a>
+</nav>
+<partial name="_LoginPartial" />
+</header>
+   <div class="about-container">
+      <div class="about-content">
+         <div class="about-text">
+            <h1>Welcome to the Book Club!</h1>
+            <p>"The book club" is a cultural community dedicated to reading enthusiasts and art lovers. For several years, we have been announcing the most interesting events, exhibitions and releases on our blog, also here you can read interviews, reviews and stories from our events.</p>
+            <p>We are proud to bring closer what we love most: culture. Through our activities, we want to cultivate the small joys of life, promote local talents and provide a platform to meet and exchange ideas for all those with an open and curious spirit.</p>
+            <p>We invite you to join us and explore together the fascinating world of books, art and culture.</p>
+         </div>
+         <!-- <div class="about-image">
+             <img src="https://www.skoolbeep.com/blog/wp-content/uploads/2020/12/HOW-DO-YOU-DESIGN-A-LIBRARY-MANAGEMENT-SYSTEM-min-768x768.png" alt="Clubul de carte">
+         </div> -->
+      </div>
+      <div class="carousel">
+         <div class="carousel-item">
+            <h4>
+               Conferences "About the world we live in", seventh edition</h3>
+               <p>May 20, Romanian Athenaeum</p>
+         </div>
+         <div class="carousel-item">
+            <h4>
+               From the town hall: The unseen side by Clotilde Armand - launch and autograph session</h3>
+               <p>May 16, 2024, Humanitas Publishing House</p>
+         </div>
+         <div class="carousel-item">
+            <h4>
+               Tudor Dinu, launch and autograph session: Baths, hammams, delights</h3>
+               <p>May 9, 2024, Humanitas Publishing House</p>
+         </div>
+         <div class="carousel-item">
+            <h4>
+               Tatiana Niculescu, launch and autograph session - The delicious story of the Romanian pastry</h3>
+               <p>April 23, 2024, Humanitas Publishing House</p>
+         </div>
+         <div class="carousel-item">
+            <h4>
+               Oppenheimer: The portrait of an enigma - Cristian Tudor Popescu in dialogue with Vlad Zografi</h3>
+               <p>April 18, 2024, Humanitas Publishing House</p>
+         </div>
+         <div class="carousel-item">
+            <h4>
+               From the time of Tudor: Radu Oltean in dialogue with Constanța Vintilă, Tudor Dinu and Radu Gârmacea</h3>
+               <p>April 16, 2024, Humanitas Publishing House</p>
+         </div>
+         <div class="carousel-item">
+            <h4>
+               Tatiana Niculescu, preview reading from the volume The Delicious Story of the Romanian Cozonac</h3>
+               <p>April 12, 2024, Humanitas Publishing House</p>
+         </div>
+         <div class="carousel-item">
+            <h4>
+               In Cluj, Mihaela Noroc in dialogue with Alexandru N. Stermin about the world of girls</h3>
+               <p>April 11, 2024, Humanitas Publishing House</p>
+         </div>
+         <div class="carousel-item">
+            <h4>
+               Italian evening dedicated to the poet Alda Merini</h3>
+               <p>April 9, 2024, Humanitas Publishing House</p>
+         </div>
+         <div class="carousel-item">
+            <h4>
+               Mimi Brănescu in dialogue with Marina Constantinescu and Radu Paraschivescu about Six pieces, one author</h3>
+               <p>April 4, 2024, Humanitas Publishing House</p>
+         </div>
+         <div class="carousel-item">
+            <h4>
+               The role and purpose of public monuments: debate</h3>
+               <p>Participants: Ioana Beldiman, Virgil Scripcariu, Nicorel Nicorescu, Gabriel Liiceanu, Cristian Leonte</p>
+         </div>
+      </div>
+   </div>
+
+   <script src="@Url.Content("~/js/about.js")"></script>
+</body>
+</html>

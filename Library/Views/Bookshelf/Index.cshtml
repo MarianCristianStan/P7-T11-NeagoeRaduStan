@@ -1,0 +1,73 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+
+@using Library.Services.Interfaces
+@inject IUserService UserService
+
+@{
+	var user = UserService.GetCurrentUser();
+	var isAdminTask = UserService.IsUserAdminAsync(user);
+	isAdminTask.Wait();
+	var isAdmin = isAdminTask.Result;
+}
+
+@model IEnumerable<Library.Models.Book>
+@{
+   ViewData["Title"] = "Bookshelf";
+   Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>@ViewData["Title"]</title>
+   <link rel="stylesheet" href="~/css/style.css" />
+   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+   <header class="header-nav">
+      <a href="@Url.Action("Index", "Home")" class="logo">
+         <img src="@Url.Content("~/assets/logo_lib.png")" />
+      </a>
+      <h5 class="page-type">Mistery Bookshelf</h5>
+      <nav class="navbar">
+         <a href="@Url.Action("Index", "Home")"><i class="bx bx-home-heart"></i>Home</a>
+			<a href="@Url.Action("Index", "AboutUs")"><i class="bx bxs-news"></i>AboutUs</a>
+         <a href="@Url.Action("Index", "Contact")"><i class="bx bxs-contact"></i>Contact</a>
+         <a href="@Url.Page("/Account/Manage/Index", new { area = "Identity" })"><i class="bx bx-cog"></i>Settings</a>
+         @if (isAdmin)
+         {
+				<a href="@Url.Action("ManageBooks", "Bookshelf")"><i class="bx bx-bx bx-book"></i>Manage Books</a>
+         }
+      </nav>
+      <partial name="_LoginPartial" />
+   </header>
+
+<div class="showcase">
+	<video class="background-video" autoplay loop muted plays-inline>
+		<source src="@Url.Content("~/assets/background/wizard_library_background_video.mp4")" />
+	</video>
+
+	<div class="container">
+		@foreach (var book in Model)
+		{
+			<div class="card">
+				<img src="@Url.Content($"~/assets/books/{book.ISBN}.png")" alt="@book.Title" onerror="this.src='@Url.Content("~/assets/default_book.png")'">
+				<div class="card-content">
+					<h2>@book.Title</h2>
+					<p> @book.Category</p>
+					<a class="more-details" href="@Url.Action("Create", "Request", new { isbn = book.ISBN })">Request Book</a>
+					<a class="more-details" href="@Url.Action("Index", "Review", new { isbn = book.ISBN })">Review</a>
+
+				</div>
+			</div>
+		}
+	</div>
+	</div>
+
+
+
+<script src="~/js/script.js"></script>
+</body>
+</html>

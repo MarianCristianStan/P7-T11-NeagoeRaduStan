@@ -1,0 +1,74 @@
+﻿@{
+	ViewData["Title"] = "Contact";
+	Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>@ViewData["Title"]</title>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="/css/contact.css">
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="contact-body">
+
+	<header class="header-nav">
+		<a href="@Url.Action("Index", "Home")" class="logo">
+			<img src="@Url.Content("~/assets/logo_lib.png")" />
+		</a>
+		<h5 class="page-type">Contact</h5>
+		<nav class="navbar">
+			<a href="@Url.Action("Index", "Home")"><i class="bx bx-home-heart"></i>Home</a>
+         <a href="@Url.Action("Index", "AboutUs")"><i class="bx bxs-news"></i>AboutUs</a>
+			<a href="@Url.Action("Index", "Contact")"><i class="bx bxs-contact"></i>Contact</a>
+			<a href="@Url.Page("/Account/Manage/Index", new { area = "Identity" })"><i class="bx bx-cog"></i>Settings</a>
+		</nav>
+		<partial name="_LoginPartial" />
+	</header>
+
+   <section class="details-contact" style="background-color: #f9f9f9; text-align: center; padding: 20px;">
+
+      <h2>𝕮𝖔𝖓𝖙𝖆𝖈𝖙 𝖎𝖓𝖋𝖔𝖗𝖒𝖆𝖙𝖎𝖔𝖓✍</h2>
+      <p>If you want to contact us, you can do so through the contact details or the form in this section.</p>
+      <p>Address: Str. Ciresului no. 10, Craiova</p>
+      <p>Phone: 0767169969</p>
+      <p>E-mail: thebookclub@gmail.com</p>
+
+      <form asp-action="SubmitForm" method="post" style="max-width: 600px; margin: 0 auto;">
+	      <label for="Name">Name:</label>
+	      <input type="text" id="Name" name="Name" required><br><br>
+	      <label for="Phone">Phone:</label>
+	      <input type="text" id="Phone" name="Phone" required><br><br>
+	      <label for="Subject">Subject:</label>
+	      <input type="text" id="Subject" name="Subject" required><br><br>
+	      <label for="Message">Message:</label><br>
+	      <textarea id="Message" name="Message" rows="4" required></textarea><br><br>
+	      <button type="submit">Send Message</button>
+      </form>
+      @if (ViewBag.Message != null)
+      {
+	      <div class="alert alert-success" role="alert">
+		      @ViewBag.Message
+	      </div>
+      }
+
+      @if (!ViewData.ModelState.IsValid)
+      {
+	      <div class="alert alert-danger" role="alert">
+		      <ul>
+			      @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+			      {
+				      <li>@error.ErrorMessage</li>
+			      }
+		      </ul>
+	      </div>
+      }
+   </section>
+</body>
+</html>

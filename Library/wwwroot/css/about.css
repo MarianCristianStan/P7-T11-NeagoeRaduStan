@@ -1,0 +1,186 @@
+﻿
+.about-page {
+	font-family: 'Pattaya', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-image: url("/assets/background/library1.jpg");
+	background-size: cover;
+	background-position: center;
+	margin: 0;
+	min-height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.star-field {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, rgba(255,255,255,0) 90%);
+	background-size: 50px 50px;
+	animation: starfield 60s linear infinite;
+	z-index: 0;
+}
+
+@keyframes starfield {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: -100% -100%;
+	}
+}
+
+.about-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	padding: 2rem;
+	position: relative;
+	z-index: 1;
+}
+
+.about-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 700px;
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	padding: 2rem;
+	transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+	.about-content:hover {
+		box-shadow: 0 8px 12px rgba(120, 80, 50, 0.4);
+		transform: scale(1.03);
+	}
+
+	.about-content:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(120, 80, 50, 0.2); /* Culoare maro semi-transparentă */
+		border-radius: 10px;
+		opacity: 0;
+		transition: opacity 0.3s ease-in-out;
+		pointer-events: none;
+	}
+
+	.about-content:hover:after {
+		opacity: 1; /* Afișează fundalul maro la hover */
+	}
+
+.about-text {
+	flex: 1;
+	text-align: center;
+}
+
+	.about-text h1 {
+		font-size: 2.2rem; /* Reducem dimensiunea textului la 2.2rem */
+		color: #270c02;
+		margin-bottom: 1rem;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+		font: bold;
+	}
+
+	.about-text p {
+		font-size: 1.3rem; /* Reducem dimensiunea textului la 1.1rem */
+		color: #270c02;
+		line-height: 1.6;
+		margin-top: 1rem;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+		font: bold;
+	}
+
+.about-image {
+	display: none;
+}
+
+	.about-image img {
+		width: 100%;
+		max-width: 500px;
+		height: auto;
+		border-radius: 10px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 100vh;
+}
+
+.carousel {
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	height: 100px;
+	overflow: hidden;
+	border: 2px solid #4d1b08;
+	background-color: #f0f0f0; /* modificat culoarea de fundal */
+}
+
+.carousel-item {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2em;
+	color: #fff;
+	background-color: rgba(17, 7, 0, 0.7);
+	opacity: 0;
+	animation: slide 50s infinite;
+	font-family: 'Playfair Display', serif;
+	font-weight: bold;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	box-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+	.carousel-item.active {
+		display: flex;
+		opacity: 1;
+	}
+
+	.carousel-item:not(.active) {
+		display: none;
+	}
+
+@keyframes slide {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+
+	10% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	80% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+}
