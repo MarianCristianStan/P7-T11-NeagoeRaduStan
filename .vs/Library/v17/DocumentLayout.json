@@ -1,12 +1,207 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4E50CC-DF62-4A68-9C5F-59681C1CDC49}|Library\\Library.csproj|c:\\users\\smari\\onedrive\\desktop\\library\\library\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD4E50CC-DF62-4A68-9C5F-59681C1CDC49}|Library\\Library.csproj|solutionrelative:library\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4E50CC-DF62-4A68-9C5F-59681C1CDC49}|Library\\Library.csproj|c:\\users\\smari\\onedrive\\desktop\\library\\library\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4E50CC-DF62-4A68-9C5F-59681C1CDC49}|Library\\Library.csproj|solutionrelative:library\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4E50CC-DF62-4A68-9C5F-59681C1CDC49}|Library\\Library.csproj|c:\\users\\smari\\onedrive\\desktop\\library\\library\\areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD4E50CC-DF62-4A68-9C5F-59681C1CDC49}|Library\\Library.csproj|solutionrelative:library\\areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4E50CC-DF62-4A68-9C5F-59681C1CDC49}|Library\\Library.csproj|c:\\users\\smari\\onedrive\\desktop\\library\\library\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4E50CC-DF62-4A68-9C5F-59681C1CDC49}|Library\\Library.csproj|solutionrelative:library\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4E50CC-DF62-4A68-9C5F-59681C1CDC49}|Library\\Library.csproj|c:\\users\\smari\\onedrive\\desktop\\library\\library\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4E50CC-DF62-4A68-9C5F-59681C1CDC49}|Library\\Library.csproj|solutionrelative:library\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4E50CC-DF62-4A68-9C5F-59681C1CDC49}|Library\\Library.csproj|c:\\users\\smari\\onedrive\\desktop\\library\\library\\services\\reviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4E50CC-DF62-4A68-9C5F-59681C1CDC49}|Library\\Library.csproj|solutionrelative:library\\services\\reviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{733DC58B-C92A-461C-BEB5-739982B97F38}|UnitTests\\UnitTests.csproj|c:\\users\\smari\\onedrive\\desktop\\library\\unittests\\userservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{733DC58B-C92A-461C-BEB5-739982B97F38}|UnitTests\\UnitTests.csproj|solutionrelative:unittests\\userservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{733DC58B-C92A-461C-BEB5-739982B97F38}|UnitTests\\UnitTests.csproj|c:\\users\\smari\\onedrive\\desktop\\library\\unittests\\reviewservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{733DC58B-C92A-461C-BEB5-739982B97F38}|UnitTests\\UnitTests.csproj|solutionrelative:unittests\\reviewservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{733DC58B-C92A-461C-BEB5-739982B97F38}|UnitTests\\UnitTests.csproj|c:\\users\\smari\\onedrive\\desktop\\library\\unittests\\authservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{733DC58B-C92A-461C-BEB5-739982B97F38}|UnitTests\\UnitTests.csproj|solutionrelative:unittests\\authservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4E50CC-DF62-4A68-9C5F-59681C1CDC49}|Library\\Library.csproj|c:\\users\\smari\\onedrive\\desktop\\library\\library\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4E50CC-DF62-4A68-9C5F-59681C1CDC49}|Library\\Library.csproj|solutionrelative:library\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{733DC58B-C92A-461C-BEB5-739982B97F38}|UnitTests\\UnitTests.csproj|c:\\users\\smari\\onedrive\\desktop\\library\\unittests\\bookservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{733DC58B-C92A-461C-BEB5-739982B97F38}|UnitTests\\UnitTests.csproj|solutionrelative:unittests\\bookservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\Library\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Library\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\Library\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "Library\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACwAAAB7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-26T14:30:26.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\Library\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "Library\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\Library\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeToolTip": "Library\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T14:30:25.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\Library\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "RelativeDocumentMoniker": "Library\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "ToolTip": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\Library\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "RelativeToolTip": "Library\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-26T14:30:22.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\Library\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Library\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\Library\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "RelativeToolTip": "Library\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T14:30:21.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ReviewService.cs",
+              "DocumentMoniker": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\Library\\Services\\ReviewService.cs",
+              "RelativeDocumentMoniker": "Library\\Services\\ReviewService.cs",
+              "ToolTip": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\Library\\Services\\ReviewService.cs",
+              "RelativeToolTip": "Library\\Services\\ReviewService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T14:29:09.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\Library\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Library\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\Library\\Services\\UserService.cs",
+              "RelativeToolTip": "Library\\Services\\UserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T14:28:59.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ReviewServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\UnitTests\\ReviewServiceTests.cs",
+              "RelativeDocumentMoniker": "UnitTests\\ReviewServiceTests.cs",
+              "ToolTip": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\UnitTests\\ReviewServiceTests.cs",
+              "RelativeToolTip": "UnitTests\\ReviewServiceTests.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAowCYAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T14:28:17.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\UnitTests\\UserServiceTests.cs",
+              "RelativeDocumentMoniker": "UnitTests\\UserServiceTests.cs",
+              "ToolTip": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\UnitTests\\UserServiceTests.cs",
+              "RelativeToolTip": "UnitTests\\UserServiceTests.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwLYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T14:28:17.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\Library\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Library\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\Library\\Services\\AuthService.cs",
+              "RelativeToolTip": "Library\\Services\\AuthService.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwCwAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T13:46:23.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\UnitTests\\AuthServiceTests.cs",
+              "RelativeDocumentMoniker": "UnitTests\\AuthServiceTests.cs",
+              "ToolTip": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\UnitTests\\AuthServiceTests.cs",
+              "RelativeToolTip": "UnitTests\\AuthServiceTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHIAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T13:45:50.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BookServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\UnitTests\\BookServiceTests.cs",
+              "RelativeDocumentMoniker": "UnitTests\\BookServiceTests.cs",
+              "ToolTip": "C:\\Users\\smari\\OneDrive\\Desktop\\Library\\UnitTests\\BookServiceTests.cs",
+              "RelativeToolTip": "UnitTests\\BookServiceTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T13:45:56.255Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

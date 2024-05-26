@@ -6,10 +6,9 @@ namespace Library.Services.Interfaces
 	{
 		User GetCurrentUser();
 		List<User> GetAllUsers();
-		User GetUserById(int id);
-		void AddUser(User user);
+		User GetUserById(string id);
 		void UpdateUser(User user);
-		void DeleteUser(int id);
+		void DeleteUser(string id);
 
 		public  Task<bool> IsUserAdminAsync(User user);
 	}

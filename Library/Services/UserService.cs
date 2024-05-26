@@ -42,16 +42,11 @@ namespace Library.Services
 			return (List < User >) _repositoryWrapper.UserRepository.FindAll();
 		}
 
-		public User GetUserById(int id)
+		public User GetUserById(string id)
 		{
 			return (User)_repositoryWrapper.UserRepository.FindByCondition(u => u.Id.Equals(id)).FirstOrDefault();
 		}
 
-		public void AddUser(User user)
-		{
-			_repositoryWrapper.UserRepository.Create(user);
-			_repositoryWrapper.Save();
-		}
 
 		public void UpdateUser(User user)
 		{
@@ -59,7 +54,7 @@ namespace Library.Services
 			_repositoryWrapper.Save();
 		}
 
-		public void DeleteUser(int id)
+		public void DeleteUser(string id)
 		{
 			var user = _repositoryWrapper.UserRepository.FindByCondition(u => u.Id.Equals('1')).FirstOrDefault();
 			if (user != null)
